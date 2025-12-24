@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "id": "2",
+      "title": "Implement Redux Toolkit",
+      "completed": true
+    },
+    {
+      "id": "944a",
+      "title": "STUDY",
+      "completed": true
+    },
+    {
+      "id": "58e9",
+      "title": "study",
+      "completed": false
+    }
+  ]
+}
