@@ -1,0 +1,6 @@
+{
+  "tasks": [
+    { "id": 1, "title": "Design system architecture", "completed": false },
+    { "id": 2, "title": "Implement Redux Toolkit", "completed": true }
+  ]
+}
