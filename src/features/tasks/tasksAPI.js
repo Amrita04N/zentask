@@ -1,4 +1,5 @@
-const BASE_URL = "http://localhost:5000/tasks";
+const BASE_URL = "https://zentask-api-9xyf.onrender.com/tasks";
+
 
 export const fetchTasks = async () => {
   const res = await fetch(BASE_URL);
