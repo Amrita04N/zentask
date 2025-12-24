@@ -1,16 +1,143 @@
-# React + Vite
+ZenTask – Task Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ZenTask is a modern Task Management Dashboard built using React.js and Redux Toolkit.
+It allows users to manage daily tasks with features like adding, deleting, searching, filtering, task status toggling, and light/dark theme support.
+The application uses a mock REST API powered by JSON Server, deployed separately.
 
-Currently, two official plugins are available:
+Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Frontend (Vercel):
+https://zentask.vercel.app
 
-## React Compiler
+Backend API (Render – JSON Server):
+https://zentask-api-9xyf.onrender.com/tasks
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Note: The backend is hosted on Render’s free tier, so the first request may take ~30–50 seconds due to cold start.
 
-## Expanding the ESLint configuration
+Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+View list of tasks
+
+Add a new task (instant UI update)
+
+Delete a task
+
+Mark task as Completed / Pending
+
+Search tasks by title
+
+Filter tasks (All / Pending / Completed)
+
+Light / Dark theme toggle
+
+Persistent data using mock REST API
+
+Responsive UI
+
+Tech Stack
+Frontend
+
+React.js (Functional Components & Hooks)
+
+Redux Toolkit (State Management)
+
+React Redux
+
+Tailwind CSS / Custom Styling
+
+Vite
+
+Backend
+
+JSON Server (Mock REST API)
+
+Node.js
+
+Render (Deployment)
+
+Deployment
+
+Frontend: Vercel
+
+Backend: Render
+
+Project Structure
+zentask/
+│
+├── backend/
+│   ├── db.json
+│   ├── package.json
+│   └── server.js
+│
+├── src/
+│   ├── app/
+│   │   └── store.js
+│   ├── features/
+│   │   └── tasks/
+│   │       ├── tasksSlice.js
+│   │       └── tasksAPI.js
+│   ├── components/
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── package.json
+└── README.md
+
+Local Setup Instructions
+1️⃣ Clone the repository
+git clone https://github.com/<your-username>/zentask.git
+cd zentask
+
+2️⃣ Install frontend dependencies
+npm install
+
+3️⃣ Start frontend
+npm run dev
+
+4️⃣ Start backend (JSON Server)
+cd backend
+npm install
+npm start
+
+
+Backend will run at:
+
+http://localhost:5000/tasks
+
+API Endpoints
+Method	Endpoint	Description
+GET	/tasks	Fetch all tasks
+POST	/tasks	Add a new task
+PUT	/tasks/:id	Update task
+DELETE	/tasks/:id	Delete task
+Design Decisions
+
+Redux Toolkit was used to reduce boilerplate and manage predictable global state.
+
+Async Thunks handle API calls cleanly and keep UI components simple.
+
+JSON Server simulates real backend behavior without requiring a database.
+
+Theme state is managed globally to instantly update UI.
+
+Future Improvements (Optional)
+
+Edit task title
+
+Persist theme preference using localStorage
+
+Loading and error states
+
+Unit tests using Jest / React Testing Library
+
+Authentication (JWT)
+
+Loom Video Walkthrough
+
+A Loom video explaining the application and code structure will be attached separately.
+
+Author
+
+Amrita Nirbheek
+Final-year B.Tech CSE student
+Built as part of a frontend assignment to demonstrate React, Redux Toolkit, and deployment skills.
